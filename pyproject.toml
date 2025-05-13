@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "data-primer"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="Wang.Y", email="294961525@qq.com" },
 ]
