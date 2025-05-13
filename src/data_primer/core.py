@@ -1,4 +1,7 @@
+import numpy as np
+
 from pandas import DataFrame
+from typing import List
 
 
 def pop_columns(df: DataFrame, headers: List[str]):
@@ -56,8 +59,8 @@ def fuzzy_existence(df: DataFrame, headers: List[str], special_value: List[str] 
     """
 
     for header in headers:
-        if remove:
-            df[header] = df[header].replace(remove, np.nan)
+        if special_value:
+            df[header] = df[header].replace(special_value, np.nan)
         df[header] = (~df[header].isna() & (df[header] != '')).astype(int)
 
 
